@@ -2,19 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-08T17:13:49 IST" name="Default suite" finished-at="2024-01-08T17:13:52 IST" duration-ms="2941">
+  <suite started-at="2024-01-09T10:54:43 IST" name="Default suite" finished-at="2024-01-09T10:55:02 IST" duration-ms="18733">
     <groups>
     </groups>
-    <test started-at="2024-01-08T17:13:49 IST" name="Default test" finished-at="2024-01-08T17:13:52 IST" duration-ms="2941">
+    <test started-at="2024-01-09T10:54:43 IST" name="Default test" finished-at="2024-01-09T10:55:02 IST" duration-ms="18733">
       <class name="TestCases.LoginTest">
-        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@413d1baf]" started-at="2024-01-08T17:13:49 IST" name="browserConfiguration" finished-at="2024-01-08T17:13:49 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="openApplication()[pri:0, instance:TestCases.LoginTest@cc43f62]" started-at="2024-01-09T10:54:43 IST" name="openApplication" finished-at="2024-01-09T10:54:59 IST" duration-ms="15852" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- browserConfiguration -->
-        <test-method signature="testThePage()[pri:0, instance:TestCases.LoginTest@413d1baf]" started-at="2024-01-08T17:13:49 IST" name="testThePage" finished-at="2024-01-08T17:13:52 IST" duration-ms="2904" status="PASS">
+        </test-method> <!-- openApplication -->
+        <test-method signature="logintest()[pri:0, instance:TestCases.LoginTest@cc43f62]" started-at="2024-01-09T10:54:59 IST" name="logintest" description="Login Functionality check with correct username and password(Existing user, Admin)" finished-at="2024-01-09T10:55:02 IST" duration-ms="2821" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testThePage -->
+        </test-method> <!-- logintest -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:TestCases.LoginTest@cc43f62]" started-at="2024-01-09T10:55:02 IST" name="closeApplication" finished-at="2024-01-09T10:55:02 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
       </class> <!-- TestCases.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

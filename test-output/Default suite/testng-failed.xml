@@ -5,8 +5,9 @@
     <classes>
       <class name="TestCases.LoginTest">
         <methods>
-          <include name="testThePage"/>
-          <include name="browserConfiguration"/>
+          <include name="closeApplication"/>
+          <include name="openApplication"/>
+          <include name="logintest"/>
         </methods>
       </class> <!-- TestCases.LoginTest -->
     </classes>
