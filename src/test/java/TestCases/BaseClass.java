@@ -1,36 +1,27 @@
 package TestCases;
 
-import java.util.ResourceBundle;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 public class BaseClass {
-	
-	public static WebDriver driver;
-	
-	//public ResourceBundle rb;
-	
-	
-	@BeforeClass
-	public void openApplication() 
-	{
-		 driver =new ChromeDriver();
-		 
-	//	 rb=ResourceBundle.getBundle("./config.properties");
-		 driver.get("https://ck-staging-web.klues.ai/login");
-		 
-		 
-		 
-	}
-	
-	@AfterClass
-	public void closeApplication()
-	{
-		
-		//driver.close();
+
+	public WebDriver driver;
+
+	@BeforeMethod
+	public void browserConfiguration() {
+		driver = new ChromeDriver();
+		driver.get("https://ck-staging-web.klues.ai/login");
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
 	}
 
+	@AfterMethod
+	public void close() {
+		driver.quit();
+	}
 }
