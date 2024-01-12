@@ -1,5 +1,7 @@
 package PageObject;
 
+import static org.testng.Assert.assertFalse;
+
 import java.time.Duration;
 import java.util.NoSuchElementException;
 
@@ -10,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.Assert;
 
 public class Login_Page {
 
@@ -29,6 +32,9 @@ public class Login_Page {
 
 	@FindBy(xpath = "//span[@class='text-capitalize medium-inter-family']")
 	WebElement loginButton;
+	
+	@FindBy(xpath ="//div[@role='status']")
+	WebElement statusOfLoginToast;
 
 	public void login(String username, String passwordtxt) {
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10))
@@ -39,8 +45,15 @@ public class Login_Page {
 		wait.until(ExpectedConditions.visibilityOfAllElements(passwordField));
 		passwordField.click();
 		passwordField.sendKeys(passwordtxt);
-		wait.until(ExpectedConditions.visibilityOfAllElements(loginButton));
 		loginButton.click();
+		wait.until(ExpectedConditions.visibilityOfAllElements(statusOfLoginToast));
+		String valueOfToast = statusOfLoginToast.getText();
+		System.out.println(valueOfToast);
+	}
+	
+	public void inactiveUserLogin() {
+		
+		
 		
 	}
 
