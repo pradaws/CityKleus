@@ -1,50 +1,61 @@
 package TestCases;
 
-import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import PageObject.Login_Page;
 
+//This class is to test existing users. 
 public class LoginTest extends BaseClass {
-	Login_Page loginPage;
+	// Existing Users credentials
+	String adminUserName = "admin@klues.ai";
+	String adminPassword = "Demo$123";
+	String employeeUserName = "pradeep@gmail.com";
+	String employeePassword = "Pradeep@1234";
+	String supervisorUserName = "supervisor@gamil.com";
+	String supervisorPassword = "Supervisor@123";
+	String reviewerUserName = "reviewer@gmail.com";
+	String reviewerPassword = "Reviewer@123";
+	
+	String wrongPassword = "fbvfhdjv";
+	String wrongEmailAddress = "hello@gmail.com";
+	
+	@Test(priority = 0, description = "Login Functionality check with correct username and password(Existing user, Admin)")
+	public void adminUserLoginTest() throws InterruptedException {
+		Login_Page loginPage = new Login_Page(driver);
+		loginPage.login(adminUserName, adminPassword);
+	}
 
-	@Test(dataProvider="dp",priority = 0, testName = "TC-0001", description = "Login Functionality check with correct username and password(Existing user, Admin)")
-	public void logintest1(String usr , String pwd) throws InterruptedException {
-		loginPage = new Login_Page(driver);
+	@Test(priority = 1, enabled = true, testName = "Login Functionality for Employee user.", description = "Login Functionality check with correct username and password(Existing user, Employee)")
+	public void employeeUserLoginTest() throws InterruptedException {
+		Login_Page loginPage = new Login_Page(driver);
+		loginPage.login(employeeUserName, employeePassword);
+	}
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	@Test(priority = 2, testName = "TC0003", description = "Login Functionality check with correct username and password(Existing user, Supervisor)")
+	public void supervisorUserLoginTest() throws InterruptedException {
+		Login_Page loginPage = new Login_Page(driver);
+		loginPage.login(supervisorUserName, supervisorPassword);
+	}
 
-		loginPage.login(usr, pwd);
-
-		/*
-		 * loginPage = new Login_Page(driver);
-		 * 
-		 * driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		 * 
-		 * loginPage.login("rpradeepsrinivasan@yahoo.com", "Demo#1");
-		 * 
-		 * loginPage.login("rpradeepsrinivasan1992@gmail.com", "Demo#2");
-		 */
-
+	@Test(priority = 3, testName = "TC0004", description = "Login Functionality check with correct username and password(Existing user, Supervisor)")
+	public void reviewerUserLoginTest() throws InterruptedException {
+		Login_Page loginPage = new Login_Page(driver);
+		loginPage.login(reviewerUserName, reviewerPassword);
 	}
 	
-	@DataProvider(name="Dp",indices= {0,1,2})
-	String [][] logindata(){
-
-		String data[][]={ 
-
-				{"Admin","admin123"},
-				{"prabhu","Kishore1"},
-				{"admin","admin123"}
-
-
-		};
-		return data;
-
-
+	@Test(priority = 4, testName = "TC0005", description = "Login Functionality check with incorrect username and correct password(Existing user, Any login)")
+	public void loginWithWrongPassword() throws InterruptedException {
+		Login_Page loginPage = new Login_Page(driver);
+		loginPage.login(adminUserName, wrongPassword);
+	}
+	@Test(priority = 5, testName = "TC0006", description = "Login Functionality check with incorrect username and correct password(Existing user, Any login)")
+	public void loginWithWrongUserName() throws InterruptedException {
+		Login_Page loginPage = new Login_Page(driver);
+		loginPage.login(wrongEmailAddress, adminPassword);
+	}
+	@Test(priority = 6, testName = "TC0007", description = "Login Functionality check inactive users (Existing user, Any login)")
+	public void loginTestForInactiveUsers() throws InterruptedException {
+		Login_Page loginPage = new Login_Page(driver);
+		loginPage.login(wrongEmailAddress, adminPassword);
+	}
 }

@@ -1,12 +1,18 @@
 package PageObject;
 
-import org.openqa.selenium.By;
+import static org.testng.Assert.assertFalse;
+
+import java.time.Duration;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.testng.Assert;
 
 public class Login_Page {
 
@@ -18,26 +24,37 @@ public class Login_Page {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "input-19")
-	WebElement userName;
+	@FindBy(xpath = "//div[@class='v-text-field__slot'] //input[@autofocus='autofocus']")
+	WebElement userNameField;
 
-	@FindBy(id = "input-20")
-	WebElement password;
+	@FindBy(xpath = "//div[@class='v-text-field__slot'] //input[@type='password']")
+	WebElement passwordField;
 
 	@FindBy(xpath = "//span[@class='text-capitalize medium-inter-family']")
 	WebElement loginButton;
+	
+	@FindBy(xpath ="//div[@role='status']")
+	WebElement statusOfLoginToast;
 
-	// @FindBy(className="px-6 v-btn v-btn--is-elevated v-btn--has-bg theme--light
-	// v-size--default success darken-1")
-	// WebElement btnlogin;
-
-	@Test(dataProvider = "dp")
 	public void login(String username, String passwordtxt) {
-		userName.click();
-		userName.sendKeys(username);
-		password.click();
-		password.sendKeys(passwordtxt);
+		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(Duration.ofSeconds(10))
+				.pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class);
+		wait.until(ExpectedConditions.visibilityOfAllElements(userNameField));
+		userNameField.click();
+		userNameField.sendKeys(username);
+		wait.until(ExpectedConditions.visibilityOfAllElements(passwordField));
+		passwordField.click();
+		passwordField.sendKeys(passwordtxt);
 		loginButton.click();
+		wait.until(ExpectedConditions.visibilityOfAllElements(statusOfLoginToast));
+		String valueOfToast = statusOfLoginToast.getText();
+		System.out.println(valueOfToast);
+	}
+	
+	public void inactiveUserLogin() {
+		
+		
+		
 	}
 
 }
