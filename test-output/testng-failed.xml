@@ -9,6 +9,9 @@
           <include name="close"/>
           <include name="browserConfiguration"/>
           <include name="reviewerUserLoginTest"/>
+          <include name="loginWithWrongUserName"/>
+          <include name="loginWithWrongPassword"/>
+          <include name="supervisorUserLoginTest"/>
           <include name="adminUserLoginTest"/>
         </methods>
       </class> <!-- TestCases.LoginTest -->

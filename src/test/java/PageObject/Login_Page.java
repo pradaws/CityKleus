@@ -3,12 +3,10 @@ package PageObject;
 import java.time.Duration;
 import java.util.NoSuchElementException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -23,10 +21,10 @@ public class Login_Page {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(id = "input-19")
+	@FindBy(xpath = "//div[@class='v-text-field__slot'] //input[@autofocus='autofocus']")
 	WebElement userNameField;
 
-	@FindBy(id = "input-20")
+	@FindBy(xpath = "//div[@class='v-text-field__slot'] //input[@type='password']")
 	WebElement passwordField;
 
 	@FindBy(xpath = "//span[@class='text-capitalize medium-inter-family']")
@@ -43,6 +41,7 @@ public class Login_Page {
 		passwordField.sendKeys(passwordtxt);
 		wait.until(ExpectedConditions.visibilityOfAllElements(loginButton));
 		loginButton.click();
+		
 	}
 
 }
