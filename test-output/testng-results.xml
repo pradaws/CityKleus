@@ -1,41 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
+<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-12T12:14:30 IST" name="Default suite" finished-at="2024-01-12T12:16:08 IST" duration-ms="97922">
+  <suite started-at="2024-01-12T12:22:04 IST" name="Default suite" finished-at="2024-01-12T12:24:11 IST" duration-ms="127594">
     <groups>
     </groups>
-    <test started-at="2024-01-12T12:14:30 IST" name="Default test" finished-at="2024-01-12T12:16:08 IST" duration-ms="97922">
+    <test started-at="2024-01-12T12:22:04 IST" name="Default test" finished-at="2024-01-12T12:24:11 IST" duration-ms="127594">
       <class name="TestCases.LoginTest">
-        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:14:30 IST" name="browserConfiguration" finished-at="2024-01-12T12:15:00 IST" duration-ms="29661" status="PASS">
+        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:22:04 IST" name="browserConfiguration" finished-at="2024-01-12T12:22:48 IST" duration-ms="43985" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserConfiguration -->
-        <test-method signature="adminUserLoginTest()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:00 IST" name="adminUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Admin)" finished-at="2024-01-12T12:15:01 IST" duration-ms="526" status="PASS">
+        <test-method signature="adminUserLoginTest()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:22:48 IST" name="adminUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Admin)" finished-at="2024-01-12T12:22:48 IST" duration-ms="8" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Input must be set]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Input must be set
+at org.openqa.selenium.internal.Require.nonNull(Require.java:60)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:94)
+at org.openqa.selenium.support.ui.FluentWait.<init>(FluentWait.java:85)
+at PageObject.Login_Page.login(Login_Page.java:36)
+at TestCases.LoginTest.adminUserLoginTest(LoginTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- adminUserLoginTest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:01 IST" name="close" finished-at="2024-01-12T12:15:01 IST" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:22:48 IST" name="close" finished-at="2024-01-12T12:22:48 IST" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:01 IST" name="browserConfiguration" finished-at="2024-01-12T12:15:17 IST" duration-ms="16102" status="PASS">
+        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:22:48 IST" name="browserConfiguration" finished-at="2024-01-12T12:23:05 IST" duration-ms="17285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserConfiguration -->
-        <test-method signature="employeeUserLoginTest()[pri:1, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:17 IST" name="employeeUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Employee)" finished-at="2024-01-12T12:15:18 IST" duration-ms="645" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- employeeUserLoginTest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:18 IST" name="close" finished-at="2024-01-12T12:15:18 IST" duration-ms="200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:18 IST" name="browserConfiguration" finished-at="2024-01-12T12:15:38 IST" duration-ms="20043" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserConfiguration -->
-        <test-method signature="supervisorUserLoginTest()[pri:2, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:38 IST" name="supervisorUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Supervisor)" finished-at="2024-01-12T12:15:38 IST" duration-ms="27" status="FAIL">
+        <test-method signature="employeeUserLoginTest()[pri:1, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:23:05 IST" name="employeeUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Employee)" finished-at="2024-01-12T12:23:05 IST" duration-ms="41" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#input\-19"}
@@ -44,9 +72,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a6c9117161d16ce07e5e325aeb0a3649, findElement {using=id, value=input-19}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64624}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64624/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a6c9117161d16ce07e5e325aeb0a3649]]>
+Command: [bd2e5f8cea2402bc5480d66b96d44c45, findElement {using=id, value=input-19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65020/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bd2e5f8cea2402bc5480d66b96d44c45]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#input\-19"}
@@ -55,9 +83,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a6c9117161d16ce07e5e325aeb0a3649, findElement {using=id, value=input-19}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64624}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64624/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a6c9117161d16ce07e5e325aeb0a3649
+Command: [bd2e5f8cea2402bc5480d66b96d44c45, findElement {using=id, value=input-19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65020}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65020/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bd2e5f8cea2402bc5480d66b96d44c45
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -74,12 +102,12 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
 at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:264)
 at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
 at PageObject.Login_Page.login(Login_Page.java:38)
-at TestCases.LoginTest.supervisorUserLoginTest(LoginTest.java:37)
+at TestCases.LoginTest.employeeUserLoginTest(LoginTest.java:30)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -111,16 +139,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- supervisorUserLoginTest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:38 IST" name="close" finished-at="2024-01-12T12:15:38 IST" duration-ms="174" status="PASS">
+        </test-method> <!-- employeeUserLoginTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:23:05 IST" name="close" finished-at="2024-01-12T12:23:05 IST" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:15:38 IST" name="browserConfiguration" finished-at="2024-01-12T12:16:08 IST" duration-ms="30094" status="PASS">
+        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:23:05 IST" name="browserConfiguration" finished-at="2024-01-12T12:23:52 IST" duration-ms="46981" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserConfiguration -->
-        <test-method signature="reviewerUserLoginTest()[pri:3, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:16:08 IST" name="reviewerUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Supervisor)" finished-at="2024-01-12T12:16:08 IST" duration-ms="28" status="FAIL">
+        <test-method signature="supervisorUserLoginTest()[pri:2, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:23:52 IST" name="supervisorUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Supervisor)" finished-at="2024-01-12T12:23:53 IST" duration-ms="652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- supervisorUserLoginTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:23:53 IST" name="close" finished-at="2024-01-12T12:23:53 IST" duration-ms="124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="browserConfiguration()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:23:53 IST" name="browserConfiguration" finished-at="2024-01-12T12:24:11 IST" duration-ms="17938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserConfiguration -->
+        <test-method signature="reviewerUserLoginTest()[pri:3, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:24:11 IST" name="reviewerUserLoginTest" description="Login Functionality check with correct username and password(Existing user, Supervisor)" finished-at="2024-01-12T12:24:11 IST" duration-ms="22" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#input\-19"}
@@ -129,9 +169,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eec190f21997b306512cd36dab2bc05f, findElement {using=id, value=input-19}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64651/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eec190f21997b306512cd36dab2bc05f]]>
+Command: [a2f7112513dc713d579eb441660b42ae, findElement {using=id, value=input-19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65090}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65090/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2f7112513dc713d579eb441660b42ae]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#input\-19"}
@@ -140,9 +180,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.11.0', revision: '040bc5406b'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [eec190f21997b306512cd36dab2bc05f, findElement {using=id, value=input-19}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64651/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: eec190f21997b306512cd36dab2bc05f
+Command: [a2f7112513dc713d579eb441660b42ae, findElement {using=id, value=input-19}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.200, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\white\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65090}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65090/devtoo..., se:cdpVersion: 120.0.6099.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2f7112513dc713d579eb441660b42ae
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -159,12 +199,12 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.isDisplayed(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy11.isDisplayed(Unknown Source)
 at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:264)
 at org.openqa.selenium.support.ui.ExpectedConditions$9.apply(ExpectedConditions.java:260)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:205)
 at PageObject.Login_Page.login(Login_Page.java:38)
-at TestCases.LoginTest.reviewerUserLoginTest(LoginTest.java:43)
+at TestCases.LoginTest.reviewerUserLoginTest(LoginTest.java:42)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -197,7 +237,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reviewerUserLoginTest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@765d7657]" started-at="2024-01-12T12:16:08 IST" name="close" finished-at="2024-01-12T12:16:08 IST" duration-ms="190" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:TestCases.LoginTest@f79e]" started-at="2024-01-12T12:24:11 IST" name="close" finished-at="2024-01-12T12:24:11 IST" duration-ms="224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

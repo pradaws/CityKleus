@@ -6,7 +6,6 @@ import PageObject.Login_Page;
 
 //This class is to test existing users. 
 public class LoginTest extends BaseClass {
-
 	// Existing Users credentials
 	String adminUserName = "admin@klues.ai";
 	String adminPassword = "Demo$123";

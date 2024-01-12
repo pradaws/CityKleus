@@ -8,8 +8,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-public class BaseClass {
+import PageObject.Login_Page;
 
+public class BaseClass {
+	
 	public WebDriver driver;
 
 	@BeforeMethod
